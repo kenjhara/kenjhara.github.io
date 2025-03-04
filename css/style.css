@@ -15,7 +15,6 @@
   
   main {
     max-width: 810px;
-    min-width: 460px;
     margin: 0 auto;
     padding: 1rem;
   }
@@ -29,7 +28,6 @@
     z-index: 10;
     background: #ffffff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    min-width: 460px;
   }
   
   .navbar {
@@ -97,7 +95,7 @@
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-  .ps-br {
+  .ps-br-1, .ps-br-2, .ps-br-3, .ps-br-4 {
     display: none;
 }
   .comment {
@@ -198,13 +196,40 @@
   /* ------------------------------
      Responsive
   ------------------------------ */
-  @media (max-width: 630px) {
-    .ps-br {
+  @media (max-width: 580px) {
+    .ps-br-1 {
         display: block;
+    }
+    .ps-br-2, .ps-br-3, .ps-br-4 {
+      display: none;
     }
   }  
     
-  @media (max-width: 690px) {
+  @media (max-width: 533px) {
+    .ps-br-2 {
+        display: block;
+    }
+    .ps-br-1, .ps-br-3, .ps-br-4 {
+      display: none;
+    }
+  }  
+  @media (max-width: 422px) {
+    .ps-br-3 {
+        display: block;
+    }
+    .ps-br-1, .ps-br-2, .ps-br-4 {
+      display: none;
+    }
+  }  
+  @media (max-width: 380px) {
+    .ps-br-4 {
+        display: block;
+    }
+    .ps-br-1, .ps-br-2, .ps-br-3 {
+      display: none;
+    }
+  }  
+  @media (max-width: 710px) {
     .hero {
       flex-direction: column;
       text-align: center;

@@ -1,0 +1,40 @@
+name: Update Last Modified Date for Data
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  update-data-lastmodified:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Get the latest commit date among _data/*.yml
+        id: get_date
+        run: |
+          LAST_UPDATED="$(git log -1 --format="%ci" -- _data/*.yml | sort | tail -n 1)"
+          ISO_DATE="$(echo "$LAST_UPDATED" | awk '{print $1}')"          
+          echo "LAST_UPDATED=$ISO_DATE" >> $GITHUB_OUTPUT
+
+      - name: Write last_update.yml
+        run: |
+          # Actions の出力を環境変数として読み取る
+          echo "last_data_update: '${{ steps.get_date.outputs.LAST_UPDATED }}'" > _data/last_update.yml
+
+      - name: Commit changed file
+        run: |
+          git add _data/last_update.yml
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update last_update.yml automatically"
+            git push
+          fi

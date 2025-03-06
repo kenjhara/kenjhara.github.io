@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="google-site-verification" content="t0XgsiYmLPHV0ndrYlrXEKg0Dta9SbzfSRKhpE167kI" />
+  <meta name="description" content="Kenji Harada">
+  <title>Kenji Harada</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    {% include nav.html %}
+  <main>
+    {% include hero.html %}
+    {% include affiliation.html %}
+
+    {% include aboutme.html %}
+    {% include publications.html %}
+    {% include awards.html %}
+    {% include conference.html %}
+    {% include software.html %}
+    {% include internship-experience.html %}
+    {% include academic-contribution.html %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>
+        &copy; 2025 Kenji Harada
+    </p>
+    <p>
+        最終更新日: {{ site.data.last_update.last_data_update }}
+    </p>
+  </footer>
+  
+  <!-- Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

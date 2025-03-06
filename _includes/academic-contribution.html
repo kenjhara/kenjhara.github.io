@@ -1,0 +1,57 @@
+<section class="section-white card collapsible">
+
+  {% if page.lang == "en" %}
+
+  <h2 class="collapsible-trigger">
+    Academic Contributions<span class="arrow-icon">▼</span>
+  </h2>
+  <div class="content">
+    <h3>Reviewer</h3>
+    <ul>
+      {% for ar in site.data.academic-reviewer %}
+      <li>
+        {{ ar.date }}- {{ ar.detail }}
+      </li>
+      {% endfor %}
+    </ul>
+    <br>
+    <h3>Society Involvement</h3>
+    <ul>
+      {% for as in site.data.academic-society %}
+      <li>
+        {% assign asd = as.date-en | replace: "Present", "<strong><i>Present</i></strong>" %}
+        {{ asd }}: {{ as.detail-en }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% else %}
+
+  <h2 class="collapsible-trigger">
+    学術貢献活動 <span class="arrow-icon">▼</span>
+  </h2>
+  <div class="content">
+    <h3>Reviewer</h3>
+    <ul>
+      {% for ar in site.data.academic-reviewer %}
+      <li>
+        {{ ar.date }}- {{ ar.detail }}
+      </li>
+      {% endfor %}
+    </ul>
+    <br>
+    <h3>学会関連</h3>
+    <ul>
+      {% for as in site.data.academic-society %}
+      <li>
+        {% assign asd = as.date | replace: "現在", "<strong><i>現在</i></strong>" %}
+        {{ asd }}: {{ as.detail }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% endif %}
+
+</section>

@@ -1,0 +1,24 @@
+<section class="section-white card collapsible">
+
+
+    <h2 class="collapsible-trigger">
+      {% if page.lang == "en" %}
+      Software 
+      {% else %}
+      ソフトウェア
+      {% endif %}
+      <span class="arrow-icon">▼</span>
+    </h2>
+    <div class="content">
+      <ul>
+        {% for software in site.data.softwares %}
+        <li>
+            {{ software.name }}
+            Link: <a href="{{ software.link }}">{{ software.link }}</a>
+          </li>
+        <img class="software-logo" src="{{ software.img }}">
+        {% endfor %}
+      </ul>
+    </div>
+</section>
+

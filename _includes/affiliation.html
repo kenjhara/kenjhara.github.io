@@ -1,0 +1,40 @@
+
+<section class="section-gray card">
+    
+    {% if page.lang == "en" %}
+    
+    <h2>Current Affiliation</h2>
+    <ul>
+        {% for affiliation in site.data.affiliations %}
+        <li>
+            {{ affiliation.en }}
+        </li>
+        {% endfor %}
+    </ul>
+    
+    {% else %}
+    
+    <h2>現所属</h2>
+    <ul>
+        {% for affiliation in site.data.affiliations %}
+        <li>
+            {{ affiliation.ja }}
+        </li>
+        {% endfor %}
+    </ul>
+    
+    {% endif %}
+
+    <br>
+    <a href="https://scholar.google.co.jp/citations?user=U6RMkb0AAAAJ&hl=ja"><img src="icons/google-scholar.svg" alt="github" width="30" height="30"></a>
+    <a href="https://orcid.org/0000-0002-8995-2846"><img src="icons/ORCID-iD_icon_32x32.png" alt="github" width="30" height="30"></a>
+    <a href="https://www.researchgate.net/profile/Kenji-Harada-4"><img src="icons/icon_rg.png" alt="github" width="30" height="30"></a>
+    <a href="https://github.com/kenjhara"><img src="icons/github-mark.svg" alt="github" width="30" height="30"></a>
+    <span id="liam-container" width="30" height="30">
+        <img src="icons/icon-liam.png" width="30" height="30">
+    </span>
+</section>
+
+
+
+

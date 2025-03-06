@@ -1,0 +1,40 @@
+<section class="section-gray card collapsible">
+
+
+
+  {% if page.lang == "en" %}
+
+  <h2 class="collapsible-trigger">
+    Internship & Other Experiences <span class="arrow-icon">▼</span>
+  </h2>
+  <div class="content">
+    <ul>
+      {% for internship-experience in site.data.internship-experiences %}
+      <li>
+          {% assign internship-experience-date-en = internship-experience.date-en | replace: "Present", "<strong><i>Present</i></strong>" %}
+          {{ internship-experience-date-en }}, {{ internship-experience.post-en }}, {{ internship-experience.organization-en }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% else %}
+
+  <h2 class="collapsible-trigger">
+    インターンシップ等 <span class="arrow-icon">▼</span>
+  </h2>
+  <div class="content">
+    <ul>
+      {% for internship-experience in site.data.internship-experiences %}
+      <li>
+          {% assign internship-experience-date = internship-experience.date | replace: "現在", "<strong><i>現在</i></strong>" %}
+          {{ internship-experience-date }}, {{ internship-experience.post }}, {{ internship-experience.organization }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% endif %}
+
+</section>
+

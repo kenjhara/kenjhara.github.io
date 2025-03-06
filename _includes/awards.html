@@ -1,0 +1,34 @@
+<section class="section-white card collapsible">
+  {% if page.lang == "en" %}
+  
+  <h2 class="collapsible-trigger">
+    Honors & Awards <span class="arrow-icon">▼</span>
+  </h2>
+  <div class="content">
+    <ul>
+      {% for award in site.data.awards %}
+      <li>
+        {{ award.date-en }}, <strong>{{ award.title-en }}</strong>, {{ award.by-en }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  
+  {% else %}
+
+  <h2 class="collapsible-trigger">
+      受賞等 <span class="arrow-icon">▼</span>
+  </h2>
+  <div class="content">
+    <ul>
+      {% for award in site.data.awards %}
+      <li>
+        {{ award.date-ja }}, <strong>{{ award.title-ja }}</strong>, {{ award.by-ja }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% endif %}
+</section>

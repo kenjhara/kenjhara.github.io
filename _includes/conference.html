@@ -1,0 +1,95 @@
+<section class="section-gray card collapsible">
+
+    {% if page.lang == "en" %}
+
+    <h2 class="collapsible-trigger">
+        Conference Presentations <span class="arrow-icon">▼</span>
+      </h2>
+      <div class="content">
+          <h3>International Conferences</h3>
+          <ol>
+              {% for conf in site.data.conferences-int %}
+              <li>
+                  {% assign highlighted_authors = conf.authors | replace: "Kenji Harada", "<strong>Kenji Harada</strong>" %}
+                  【{{ conf.type }}】
+                  {{ highlighted_authors }}. 
+                  <span>{{ conf.title }}</span>. 
+                  <em>{{ conf.event }}</em>. 
+                  {% if conf.city and conf.country %}
+                  {{ conf.city }}, {{ conf.country }},
+                  {% elsif conf.location %}
+                  {{ conf.location }},
+                  {% endif %}
+                  {% if conf.year %}
+                  {{ conf.year }}.
+                  {% elsif conf.date %}
+                  {{ conf.date }}.
+                  {% endif %}
+              </li>
+              {% endfor %}
+          </ol>
+          <br>
+          <h3>Domestic Conferences (Japan)</h3>
+          <ol>
+              {% for presentation in site.data.conferences-dom %}
+              <li>
+                  {% assign highlighted_authors_en = presentation.authors-en | replace: "原田健司", "<strong>原田健司</strong>" %}
+                  {% assign highlighted_authors_en = highlighted_authors_en | replace: "Kenji Harada", "<strong>Kenji Harada</strong>" %}
+                  【{{ presentation.type-en }}】
+                  {{ highlighted_authors_en }}. 
+                  {{ presentation.title-en }}. 
+                  <em>{{ presentation.conference-en }}</em>. 
+                  {{ presentation.location-en }}, {{ presentation.date-en }}.
+              </li>
+          {% endfor %}
+          </ol>
+      </div>  
+
+    {% else %}
+  
+    <h2 class="collapsible-trigger">
+      学会発表 <span class="arrow-icon">▼</span>
+    </h2>
+    <div class="content">
+        <h3>国際学会</h3>
+        <ol>
+            {% for conf in site.data.conferences-int %}
+            <li>
+                {% assign highlighted_authors = conf.authors | replace: "Kenji Harada", "<strong>Kenji Harada</strong>" %}
+                【{{ conf.type }}】
+                {{ highlighted_authors }}. 
+                <span>{{ conf.title }}</span>. 
+                <em>{{ conf.event }}</em>. 
+                {% if conf.city and conf.country %}
+                {{ conf.city }}, {{ conf.country }},
+                {% elsif conf.location %}
+                {{ conf.location }},
+                {% endif %}
+                {% if conf.year %}
+                {{ conf.year }}.
+                {% elsif conf.date %}
+                {{ conf.date }}.
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ol>
+        <br>
+        <h3>国内学会</h3>
+        <ol>
+            {% for presentation in site.data.conferences-dom %}
+            <li>
+                {% assign highlighted_authors_ja = presentation.authors | replace: "原田健司", "<strong>原田健司</strong>" %}
+                {% assign highlighted_authors_ja = highlighted_authors_ja | replace: "Kenji Harada", "<strong>Kenji Harada</strong>" %}
+                【{{ presentation.type }}】
+                {{ highlighted_authors_ja }}. 
+                {{ presentation.title }}. 
+                <em>{{ presentation.conference }}</em>. 
+                {{ presentation.location }}, {{ presentation.date }}.
+            </li>
+        {% endfor %}
+        </ol>
+    </div>
+    
+    {% endif %}
+
+</section>

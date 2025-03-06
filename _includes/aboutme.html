@@ -1,0 +1,85 @@
+<section class="section-white card">
+
+  {% if page.lang == "en" %}
+
+  <h2>About me</h2>
+    <p>
+      {% for intro in site.data.introduction %}
+        {{ intro.en }}
+      {% endfor %}
+    </p>
+    <br>
+    <h3>Research Interests</h3>
+    <ul>
+      {% for interest in site.data.interests %}
+      <li>
+          {{ interest.en }}
+      </li>
+      {% endfor %}
+    </ul>
+    <br>
+    <h3>Education</h3>
+    <ul>
+      {% for education in site.data.educations %}
+      <li>
+          {% assign ej = education.en | replace: "Present", "<strong><i>Present</i></strong>" %}
+          {{ ej }}
+      </li>
+      {% endfor %}
+    </ul>
+    <br>
+    <h3>Employment</h3>
+    <ul>
+      {% for employment in site.data.employments %}
+      <li>
+        {% assign emj = employment.en | replace: "Present", "<strong><i>Present</i></strong>" %}
+        {{ emj }}
+      </li>
+      {% endfor %}
+    </ul>
+
+
+  {% else %}
+
+  <h2>自己紹介</h2>
+    <p>
+      {% for intro in site.data.introduction %}
+        {{ intro.ja }}
+      {% endfor %}
+    </p>
+    <br>
+    <h3>興味</h3>
+    <ul>
+      {% for interest in site.data.interests %}
+      <li>
+          {{ interest.ja }}
+      </li>
+      {% endfor %}
+    </ul>
+    <br>
+    <h3>学歴</h3>
+    <ul>
+      {% for education in site.data.educations %}
+      <li>
+          {% assign ej = education.ja | replace: "現在", "<strong><i>現在</i></strong>" %}
+          {{ ej }}
+      </li>
+      {% endfor %}
+    </ul>
+    <br>
+    <h3>職歴</h3>
+    <ul>
+      {% for employment in site.data.employments %}
+      <li>
+        {% assign emj = employment.ja | replace: "現在", "<strong><i>現在</i></strong>" %}
+        {{ emj }}
+      </li>
+      {% endfor %}
+    </ul>
+
+  {% endif %}
+
+</section>
+
+
+

@@ -1,1 +1,6 @@
-name: My Jekyll Website
+name: Kenji Harada 原田 健司
+google_analytics: G-FQDK3YEFQ7
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag

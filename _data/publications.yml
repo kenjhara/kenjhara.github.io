@@ -1,5 +1,12 @@
 - title: 'Label Noise in Pathological Segmentation is Overlooked, Leading to Potential Overestimation of Artificial Intelligence Models'
   authors: 'Harada K (*co-correspondence), Nomura Y, Komura D, Ishikawa S, Sakashita S'
+  journal: 'Cancer Sci.'
+  year: '2025'
+  doi: '10.1111/cas.70288'
+  url: 'https://doi.org/10.1111/cas.70288'
+  
+- title: 'Label Noise in Pathological Segmentation is Overlooked, Leading to Potential Overestimation of Artificial Intelligence Models'
+  authors: 'Harada K (*co-correspondence), Nomura Y, Komura D, Ishikawa S, Sakashita S'
   journal: 'bioRxiv'
   year: '2025'
   doi: '10.1101/2025.02.18.638843'
@@ -10,6 +17,9 @@
   authors: 'Harada K, Sakamoto N, Kitaoka T, Nakamura Y, Kondo R, Morisue R, Hashimoto H, Yamamoto Y, Ukai S, Maruyama R, Sakashita S, Kojima M, Tanabe K, Ohdan H, Shitara K, Kinoshita T, Ishii G, Yasui W, Ochiai A, Ishikawa S'
   journal: 'J Pathol'
   year: '2025'
+  volume: '265'
+  issue: '4'
+  pages: '472-485'
   doi: '10.1002/path.6400'
   url: 'https://doi.org/10.1002/path.6400'
 

@@ -16,9 +16,10 @@
                 {% endif %}
                 {% assign highlighted_authors = paper.authors | replace: "Harada K", "<strong>Harada K</strong>" %}
                 {% assign highlighted_authors = highlighted_authors | replace: "(*co-correspondence)", "<strong>(*co-correspondence)</strong>" %}
-                {{ highlighted_authors }}. 
-                {{ paper.title }}. 
-                <em>{{ paper.journal }}</em>. 
+                {% assign highlighted_authors = highlighted_authors | replace: "(*correspondence)", "<strong>(*correspondence)</strong>" %}
+                {{ highlighted_authors }}.
+                {{ paper.title }}.
+                <em>{{ paper.journal }}</em>.
                 {{ paper.year }}.
                 doi: <a href="{{ paper.url }}">{{ paper.doi }}</a>.
             </li>

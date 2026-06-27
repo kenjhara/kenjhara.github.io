@@ -4,9 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="google-site-verification" content="t0XgsiYmLPHV0ndrYlrXEKg0Dta9SbzfSRKhpE167kI" />
-  <meta name="keyword" content="原田健司, Kenji, Harada">
-  <meta name="description" content="Personal page for Kenji Harada, 原田健司">
-  <title>Kenji Harada</title>
+  <title>{{ page.title }} | {{ page.subtitle }}</title>
+  <meta name="description" content="{{ page.description }}">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  
+  <!-- canonical/hreflang -->
+  <link rel="canonical" href="{{ page.canonical_url }}">
+  <link rel="alternate" hreflang="en" href="https://kenjhara.github.io/">
+  <link rel="alternate" hreflang="ja" href="https://kenjhara.github.io/japanese.html">
+  <link rel="alternate" hreflang="x-default" href="https://kenjhara.github.io/">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta name="google-site-verification" content="t0XgsiYmLPHV0ndrYlrXEKg0Dta9SbzfSRKhpE167kI" />
+
+  <title>{{ page.title }} | {{ page.subtitle }}</title>
+  <meta name="description" content="{{ page.description }}">
+
+  <link rel="canonical" href="{{ page.canonical_url }}">
+
+  <link rel="alternate" hreflang="en" href="https://kenjhara.github.io/">
+  <link rel="alternate" hreflang="ja" href="https://kenjhara.github.io/japanese.html">
+  <link rel="alternate" hreflang="x-default" href="https://kenjhara.github.io/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kenji Harada",
+    "alternateName": "原田健司",
+    "honorificSuffix": "M.D., Ph.D.",
+    "url": "https://kenjhara.github.io/",
+    "knowsAbout": [
+      "Pathology",
+      "Cancer organoids",
+      "Chemotherapy resistance",
+      "AI pathology",
+      "Pathological image analysis",
+      "Label noise",
+      "Tumor microenvironment"
+    ],
+    "sameAs": [
+      "https://github.com/kenjhara",
+      "https://orcid.org/0000-0002-8995-2846",
+      "https://scholar.google.com/citations?user=U6RMkb0AAAAJ",
+      "https://www.researchgate.net/profile/Kenji-Harada-4"
+    ]
+  }
+  </script>
 
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,6 +80,10 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
+
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQDK3YEFQ7"></script>
 <script>

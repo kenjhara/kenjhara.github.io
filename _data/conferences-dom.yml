@@ -1,3 +1,16 @@
+- type-en: 'Poster'
+  type: 'ポスター'
+  authors-en: 'Kenji Harada, Satoko Ochi, Waso, Fujinaka'
+  authors: '原田健司, 越智聡子, 藤中和三'
+  title-en: 'A Case of Delayed Cerebral Herniation After Early Cardiac Surgery for Infective Endocarditis Complicated by Extensive Cerebral Infarction'
+  title: '広範囲脳梗塞を合併した感染性心内膜炎に対する早期心臓手術後に遅発性脳ヘルニアを来した１例'
+  conference-en: 'The 63rd Annual Meeting of the Chugoku-Shikoku Branch of the Japanese Society of Anesthesiologists'
+  conference: '日本麻酔科学会中国・四国支部第63回学術集会'
+  location-en: 'Matsue'
+  location: '松江'
+  date-en: 'Sep. 12, 2026'
+  date: '2026年9月12日'
+
 - type-en: 'Oral'
   type: '口頭'
   authors-en: 'Kenji Harada, Tomoaki Watanabe, Mayumi Ota, Tomohiro Ikemori, Fuko Kotani, Takehiro Tsuchimoto, Dai Agari, Tomoyuki Kono, Hiroki Ueno, Eiichi Nomura'
@@ -23,7 +36,7 @@
   location: '札幌'
   date-en: 'Apr. 16-18, 2026'
   date: '2026年4月16-18日'
-  
+
 - type-en: 'Oral'
   type: '口頭'
   authors-en: 'Kenji Harada, Naoya Sakamoto, Motohiro Kojima, Shoichi Ukai, Shingo Sakashita, Kazuaki Tanabe, Hideki Ohdan, Wataru Yasui, Atsushi Ochiai, Shumpei Ishikawa'
